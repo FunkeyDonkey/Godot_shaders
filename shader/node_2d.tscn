@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://cgsm7b5dib1ci"]
+
+[ext_resource type="Texture2D" uid="uid://biybhj6lth01h" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Shader" uid="uid://dgwk6weodr18" path="res://3.gdshader" id="3_0hol4"]
+[ext_resource type="Shader" uid="uid://bkmwt8lspn6j" path="res://2.gdshader" id="4_q6r6c"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_epypp"]
+shader = ExtResource("3_0hol4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kdubu"]
+shader = ExtResource("3_0hol4")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_d21ai"]
+shader = ExtResource("4_q6r6c")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_epypp")
+position = Vector2(373, -179)
+texture = ExtResource("1_wtcfe")
+
+[node name="Original" type="Sprite2D" parent="."]
+position = Vector2(233, -179)
+texture = ExtResource("1_wtcfe")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 206.0
+offset_top = -283.0
+offset_right = 565.0
+offset_bottom = -260.0
+text = "Original              Gradiant tint              Vignette                 Pixelated"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_kdubu")
+position = Vector2(655, -179)
+texture = ExtResource("1_wtcfe")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_d21ai")
+position = Vector2(515, -179)
+texture = ExtResource("1_wtcfe")
